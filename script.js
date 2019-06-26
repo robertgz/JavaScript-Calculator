@@ -1,6 +1,7 @@
 var calc = (function() {
   var calcData = {
-    currentState: null, // {type: "number", value: "0"} | {type: "opp", value: "+"}
+    currentState: null, 
+    // {type: "number", value: "0"} | {type: "opp", value: "+"}
     expArr: [], // array of curentStates 
     opSt: "/*-+",    
     expresion: null,
@@ -224,16 +225,3 @@ $(document).ready(function() {
   $("#equal").on("click", calc.equal);
   
 });
-
-function runTests() {
-  var temp = calc.appendExp("-"); //calc.getExp()
-  console.log(
-    expect(temp).toEqual("-", "It does.")
-    //expect({value: "-"}).toEqual({value: "-"}, "It does.")
-  );
-  return "Tests complete.";
-}
-
-/* Issues
-  operator pressed after a CE does not show  
-*/
